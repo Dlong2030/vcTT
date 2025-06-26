@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Nguyễn Thị Thanh Trúc</title>
     <link rel="shortcut icon"
         href="https://res.cloudinary.com/dnmp06kjg/image/upload/v1750964030/assets/avata_ac4bhv.jpg"
         type="image/x-icon">
-    <title>CV - Nguyễn Thị Thanh Trúc</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <style>
         * {
@@ -51,14 +51,16 @@
         .header {
             background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
             color: white;
-            padding: 40px;
+            padding: 30px 40px;
+            /* Giảm padding để giảm khoảng trống */
             text-align: center;
             position: relative;
             overflow: hidden;
             display: flex;
             flex-direction: column;
             align-items: center;
-            min-height: 400px;
+            min-height: 380px;
+            /* Giảm chiều cao tối thiểu */
         }
 
         .header::before {
@@ -71,7 +73,8 @@
             background-image: url('https://res.cloudinary.com/dnmp06kjg/image/upload/v1750964030/assets/avata_ac4bhv.jpg');
             background-size: cover;
             background-position: center;
-            filter: blur(8px) brightness(0.6);
+            filter: blur(4px) brightness(0.6);
+            /* Giảm độ mờ để hình rõ hơn */
             opacity: 0.7;
             z-index: 1;
             transition: all 0.5s ease;
@@ -79,9 +82,10 @@
 
         .profile-container {
             position: relative;
-            width: 200px;
-            height: 200px;
-            margin: 0 auto 30px;
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 20px;
+            /* Giảm khoảng cách dưới */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -89,46 +93,51 @@
         }
 
         .profile-photo {
-            width: 200px;
-            height: 200px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
-            border: 5px solid rgba(255, 255, 255, 0.5);
+            border: 4px solid rgba(255, 255, 255, 0.5);
             background-image: url('https://res.cloudinary.com/dnmp06kjg/image/upload/v1750964030/assets/avata_ac4bhv.jpg');
             background-size: cover;
             background-position: center;
             position: relative;
             z-index: 3;
             transition: all 0.4s ease;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
         }
 
         .profile-photo:hover {
-            transform: scale(1.08);
+            transform: scale(1.05);
             border-color: rgba(255, 255, 255, 0.8);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
         }
 
         .name {
-            font-size: 2.5em;
+            font-size: 2.3em;
+            /* Giảm kích thước chữ */
             font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
+            /* Giảm khoảng cách */
             position: relative;
             z-index: 2;
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-            letter-spacing: 1px;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+            letter-spacing: 0.5px;
         }
 
         .title {
-            font-size: 1.5em;
+            font-size: 1.4em;
+            /* Giảm kích thước chữ */
             opacity: 0.9;
             position: relative;
             z-index: 2;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+            /* Giảm khoảng cách */
             font-weight: 300;
             background: rgba(0, 0, 0, 0.2);
-            padding: 5px 15px;
-            border-radius: 20px;
+            padding: 4px 12px;
+            /* Giảm padding */
+            border-radius: 18px;
             display: inline-block;
         }
 
@@ -140,29 +149,34 @@
 
         .sidebar {
             background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
-            padding: 40px 25px;
+            padding: 30px 25px;
+            /* Giảm padding */
             border-right: 1px solid #d1d8e0;
         }
 
         .content {
-            padding: 40px 30px;
+            padding: 30px;
+            /* Giảm padding */
             background: #ffffff;
         }
 
         .section {
-            margin-bottom: 35px;
+            margin-bottom: 30px;
+            /* Giảm khoảng cách */
         }
 
         .section-title {
-            font-size: 1.4em;
+            font-size: 1.3em;
+            /* Giảm kích thước chữ */
             font-weight: 700;
             color: #2c3e50;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
+            margin-bottom: 18px;
+            /* Giảm khoảng cách */
+            padding-bottom: 8px;
             border-bottom: 3px solid #3498db;
             position: relative;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
         }
 
         .section-title::after {
@@ -170,7 +184,7 @@
             position: absolute;
             bottom: -3px;
             left: 0;
-            width: 60px;
+            width: 50px;
             height: 3px;
             background: #e74c3c;
         }
@@ -178,9 +192,11 @@
         .contact-item {
             display: flex;
             align-items: center;
-            margin-bottom: 15px;
-            padding: 12px 10px;
-            border-radius: 10px;
+            margin-bottom: 12px;
+            /* Giảm khoảng cách */
+            padding: 10px 8px;
+            /* Giảm padding */
+            border-radius: 8px;
             transition: all 0.3s ease;
             background: rgba(255, 255, 255, 0.7);
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
@@ -192,29 +208,32 @@
         }
 
         .contact-icon {
-            width: 24px;
-            height: 24px;
-            margin-right: 15px;
+            width: 22px;
+            height: 22px;
+            margin-right: 12px;
             color: #3498db;
             flex-shrink: 0;
         }
 
         .skill-item {
-            margin-bottom: 20px;
+            margin-bottom: 18px;
+            /* Giảm khoảng cách */
         }
 
         .skill-name {
             font-weight: 600;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
+            /* Giảm khoảng cách */
             color: #2c3e50;
             display: flex;
             justify-content: space-between;
         }
 
         .skill-bar {
-            height: 10px;
+            height: 8px;
+            /* Giảm chiều cao */
             background: #e0e6ed;
-            border-radius: 10px;
+            border-radius: 8px;
             overflow: hidden;
             box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
         }
@@ -222,7 +241,7 @@
         .skill-progress {
             height: 100%;
             background: linear-gradient(90deg, #3498db, #2ecc71);
-            border-radius: 10px;
+            border-radius: 8px;
             transition: width 1s ease-in-out;
             animation: fillBar 2s ease-in-out;
         }
@@ -234,119 +253,142 @@
         }
 
         .experience-item {
-            margin-bottom: 30px;
-            padding: 25px;
+            margin-bottom: 25px;
+            /* Giảm khoảng cách */
+            padding: 20px;
+            /* Giảm padding */
             border-left: 4px solid #3498db;
             background: linear-gradient(to right, #f8f9fa, #f0f5ff);
-            border-radius: 0 10px 10px 0;
+            border-radius: 0 8px 8px 0;
             transition: all 0.3s ease;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
         }
 
         .experience-item:hover {
             transform: translateX(5px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             background: linear-gradient(to right, #f0f5ff, #e6f0ff);
         }
 
         .job-title {
-            font-size: 1.25em;
+            font-size: 1.2em;
+            /* Giảm kích thước chữ */
             font-weight: 700;
             color: #2c3e50;
-            margin-bottom: 5px;
+            margin-bottom: 4px;
+            /* Giảm khoảng cách */
         }
 
         .company {
             font-weight: 600;
             color: #3498db;
-            margin-bottom: 5px;
-            font-size: 1.1em;
+            margin-bottom: 4px;
+            /* Giảm khoảng cách */
+            font-size: 1.05em;
+            /* Giảm kích thước chữ */
         }
 
         .duration {
             color: #7f8c8d;
-            font-size: 0.95em;
-            margin-bottom: 15px;
+            font-size: 0.9em;
+            /* Giảm kích thước chữ */
+            margin-bottom: 12px;
+            /* Giảm khoảng cách */
             display: inline-block;
             background: #eaf2f8;
             padding: 3px 10px;
-            border-radius: 15px;
+            border-radius: 12px;
         }
 
         .description {
             color: #444;
-            line-height: 1.7;
+            line-height: 1.6;
+            font-size: 0.95em;
+            /* Giảm kích thước chữ */
         }
 
         .education-item {
-            margin-bottom: 25px;
-            padding: 20px;
+            margin-bottom: 20px;
+            /* Giảm khoảng cách */
+            padding: 18px;
+            /* Giảm padding */
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            border-radius: 10px;
+            border-radius: 8px;
             border-left: 4px solid #e74c3c;
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
         }
 
         .degree {
             font-weight: 700;
             color: #2c3e50;
-            font-size: 1.15em;
-            margin-bottom: 5px;
+            font-size: 1.1em;
+            /* Giảm kích thước chữ */
+            margin-bottom: 4px;
+            /* Giảm khoảng cách */
         }
 
         .school {
             color: #e74c3c;
             font-weight: 600;
-            margin: 5px 0;
-            font-size: 1.05em;
+            margin: 4px 0;
+            /* Giảm khoảng cách */
+            font-size: 1em;
+            /* Giảm kích thước chữ */
         }
 
         .achievement-item {
-            margin-bottom: 15px;
-            padding: 15px 20px;
+            margin-bottom: 12px;
+            /* Giảm khoảng cách */
+            padding: 12px 18px;
+            /* Giảm padding */
             background: linear-gradient(to right, #ffffff, #f9f9f9);
             border-radius: 8px;
             border-left: 4px solid #f39c12;
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
         }
 
         .achievement-item:hover {
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
         }
 
         .activity-item {
-            margin-bottom: 20px;
-            padding: 20px;
+            margin-bottom: 18px;
+            /* Giảm khoảng cách */
+            padding: 18px;
+            /* Giảm padding */
             background: linear-gradient(to right, #ffffff, #f9f9f9);
             border-radius: 8px;
             border-left: 4px solid #9b59b6;
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
         }
 
         .activity-item:hover {
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
         }
 
         .interest-item {
             display: inline-block;
             background: linear-gradient(135deg, #3498db, #2980b9);
             color: white;
-            padding: 8px 18px;
-            border-radius: 20px;
-            margin: 0 8px 12px 0;
-            font-size: 0.95em;
+            padding: 7px 16px;
+            /* Giảm padding */
+            border-radius: 18px;
+            margin: 0 6px 10px 0;
+            /* Giảm khoảng cách */
+            font-size: 0.9em;
+            /* Giảm kích thước chữ */
             transition: all 0.3s ease;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .interest-item:hover {
             background: linear-gradient(135deg, #2980b9, #2573a7);
             transform: translateY(-3px);
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
         }
 
         @media (max-width: 768px) {
@@ -360,31 +402,31 @@
             }
 
             .header {
-                padding: 30px 20px;
-                min-height: 350px;
+                padding: 25px 20px;
+                min-height: 320px;
             }
 
             .name {
-                font-size: 2em;
+                font-size: 1.8em;
             }
 
             .title {
-                font-size: 1.2em;
+                font-size: 1.1em;
             }
 
             .sidebar,
             .content {
-                padding: 30px 20px;
+                padding: 25px 20px;
             }
 
             .profile-container {
-                width: 180px;
-                height: 180px;
+                width: 150px;
+                height: 150px;
             }
 
             .profile-photo {
-                width: 150px;
-                height: 150px;
+                width: 140px;
+                height: 140px;
             }
 
             .pdf-btn {
@@ -395,55 +437,40 @@
             }
         }
 
-        .language-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 12px;
-            padding: 10px 0;
-        }
-
-        .language-level {
-            background: linear-gradient(135deg, #3498db, #2980b9);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 15px;
-            font-size: 0.85em;
-            font-weight: 600;
-        }
-
         .social-links {
             display: flex;
             justify-content: center;
-            margin-top: 20px;
-            gap: 15px;
+            margin-top: 15px;
+            /* Giảm khoảng cách */
+            gap: 12px;
             position: relative;
             z-index: 2;
         }
 
         .social-icon {
-            width: 40px;
-            height: 40px;
+            width: 36px;
+            height: 36px;
             border-radius: 50%;
             background: rgba(255, 255, 255, 0.2);
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 1.2em;
+            font-size: 1.1em;
+            /* Giảm kích thước chữ */
             transition: all 0.3s ease;
         }
 
         .social-icon:hover {
             background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-5px);
+            transform: translateY(-4px);
         }
 
         /* Nút xuất PDF */
         .pdf-btn {
             position: fixed;
-            top: 30px;
-            right: 30px;
+            top: 25px;
+            right: 25px;
             background: linear-gradient(135deg, #e74c3c, #c0392b);
             color: white;
             border: none;
@@ -482,6 +509,7 @@
             height: 100%;
             background: rgba(0, 0, 0, 0.7);
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             z-index: 2000;
@@ -496,9 +524,9 @@
         }
 
         .spinner {
-            width: 50px;
-            height: 50px;
-            border: 5px solid rgba(255, 255, 255, 0.3);
+            width: 60px;
+            height: 60px;
+            border: 6px solid rgba(255, 255, 255, 0.3);
             border-radius: 50%;
             border-top-color: white;
             animation: spin 1s ease-in-out infinite;
@@ -515,6 +543,67 @@
             margin-top: 20px;
             font-size: 18px;
             font-weight: 500;
+        }
+
+        /* CSS cho chế độ in (xuất PDF) */
+        @media print {
+
+            body,
+            .cv-container {
+                background: white !important;
+                padding: 0;
+                margin: 0;
+                box-shadow: none;
+                border-radius: 0;
+            }
+
+            .pdf-btn {
+                display: none;
+            }
+
+            .header {
+                padding: 15px 30px !important;
+                min-height: auto !important;
+            }
+
+            .profile-container {
+                margin-bottom: 10px !important;
+            }
+
+            .profile-photo {
+                width: 120px !important;
+                height: 120px !important;
+                border-width: 3px !important;
+            }
+
+            .name {
+                font-size: 1.8em !important;
+                margin-bottom: 5px !important;
+            }
+
+            .title {
+                font-size: 1.2em !important;
+                margin-bottom: 8px !important;
+            }
+
+            .section {
+                margin-bottom: 20px !important;
+            }
+
+            .section-title {
+                font-size: 1.2em !important;
+                margin-bottom: 12px !important;
+            }
+
+            .social-links {
+                margin-top: 10px !important;
+            }
+
+            .social-icon {
+                width: 30px !important;
+                height: 30px !important;
+                font-size: 0.9em !important;
+            }
         }
     </style>
 </head>
@@ -671,7 +760,7 @@
                 <section class="section">
                     <h2 class="section-title">Mục tiêu nghề nghiệp</h2>
                     <p
-                        style="line-height: 1.8; background: #f8f9fa; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+                        style="line-height: 1.7; background: #f8f9fa; padding: 18px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); font-size: 0.95em;">
                         Trong thời gian sắp tới, tôi muốn tìm một nơi để mình có thể trao dồi kiến thức và tích lũy kinh
                         nghiệm để trở thành người giáo viên giỏi. Ngoài ra, được làm việc lâu dài trong môi trường hiện
                         đại, trẻ trung, năng động. Mong muốn có cơ hội cổng hiến một phần cho sự phát triển của đơn vị.
@@ -764,8 +853,8 @@
     </div>
 
     <script>
-        // Animation for progress bars
         document.addEventListener('DOMContentLoaded', function () {
+            // Animation for progress bars
             const progressBars = document.querySelectorAll('.skill-progress');
             progressBars.forEach(bar => {
                 const width = bar.style.width;
@@ -801,15 +890,12 @@
             pdfButton.addEventListener('click', generatePDF);
 
             function generatePDF() {
-                const loadingOverlay = document.getElementById('loadingOverlay');
-                const cvContent = document.getElementById('cvContent');
-
                 // Hiển thị overlay loading
                 loadingOverlay.classList.add('active');
 
-                // Cấu hình chất lượng cao cho PDF
+                // Cấu hình cho file PDF
                 const opt = {
-                    margin: 0, // Loại bỏ margin để không có khoảng trống
+                    margin: [5, 5, 5, 5], // Giảm margin để giảm khoảng trống
                     filename: 'CV-Nguyen-Thi-Thanh-Truc.pdf',
                     image: {
                         type: 'jpeg',
@@ -818,7 +904,8 @@
                     html2canvas: {
                         scale: 3, // Tăng độ phân giải lên 3x
                         useCORS: true,
-                        logging: false
+                        logging: false,
+                        backgroundColor: '#FFFFFF' // Đảm bảo nền trắng
                     },
                     jsPDF: {
                         unit: 'mm',
@@ -832,6 +919,10 @@
                 setTimeout(() => {
                     html2pdf().set(opt).from(cvContent).save().then(() => {
                         loadingOverlay.classList.remove('active');
+                    }).catch(err => {
+                        console.error('Lỗi khi tạo PDF:', err);
+                        loadingOverlay.classList.remove('active');
+                        alert('Đã xảy ra lỗi khi tạo file PDF. Vui lòng thử lại.');
                     });
                 }, 1000);
             }
